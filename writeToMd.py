@@ -34,14 +34,14 @@ if __name__ == "__main__":
             for s in speaker_data:
                 s_node = s['n2']
                 speaker += (dict(s_node)['name'] + ',')
-            speaker = speaker[:-2]
+            speaker = speaker[:-1]
 
             track_data = graph.run('MATCH (n1:Title {name: "%s"}) - [:HasTrack] - (n2) RETURN n2' % (title)).data()
             track = ''
             for t in track_data:
                 t_node = t['n2']
                 track += (dict(t_node)['name'] + ',')
-            track = track[:-2]
+            track = track[:-1]
 
             fp.write('|%d|[%s](%s)|%s|%s|\n' % (i + 1, title, url, speaker, track))
             
