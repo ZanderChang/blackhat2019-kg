@@ -9,7 +9,6 @@ if __name__ == "__main__":
     graph.run('MATCH ()-[r:HasSpeaker]->() DELETE r')
     graph.run('MATCH ()-[r:HasTrack]->() DELETE r')
     graph.run('MATCH (n:Title) DELETE n')
-    graph.run('MATCH (n:Title) DELETE n')
     graph.run('MATCH (n:Speaker) DELETE n')
     graph.run('MATCH (n:Track) DELETE n')
     
